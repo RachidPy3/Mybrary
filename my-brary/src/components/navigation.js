@@ -1,4 +1,5 @@
 import React from "react";
+import "./navigation.css";
 
 export default function Navigation() {
   return (
@@ -9,13 +10,12 @@ export default function Navigation() {
         </div>
 
         <div className="search-bar">
-          <input type="text" />
+          <input placeholder="search by autor, title, name" type="text" />
         </div>
 
         <div className="favorites">
-          <div className="heart"></div>
-          <div className="profile"></div>
-          <div className="language">EN</div>
+          <div className="profile">O</div>
+          <span className="language">EN</span>
         </div>
       </section>
 
