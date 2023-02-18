@@ -1,0 +1,19 @@
+.trending-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.trending img{
+    height: 200px;
+    width: 130px;
+}
+
+.grid{
+    display: grid;
+    gap:1rem;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.single-grid{
+   
+}

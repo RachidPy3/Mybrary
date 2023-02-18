@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.app{
+  padding: 60px 80px 0px 80px;
+}
