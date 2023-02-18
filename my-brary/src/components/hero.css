@@ -1,0 +1,38 @@
+.hero{
+    background-color: #f5e6de;
+    display: flex;
+    gap:20px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+h1{
+    color: #403A88;
+}
+p{
+    color: gray;
+}
+img{
+    
+    height: 250px;
+    padding-right: 60px;
+}
+.heading{
+    padding: 60px 60px 60px 60px;
+    width: 40%;
+}
+
+button{
+    background-color: #C1A693;
+    color: white;
+    padding: 8px 15px 8px 15px;
+    border-radius: 10px;
+    border: none;
+}
+
+.hero-image{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
