@@ -8,7 +8,6 @@ function App() {
     <div className="App">
       <Navigation/>
       <Hero/>
-    <p>Checking pull requesr</p>
     </div>
   );
 }
