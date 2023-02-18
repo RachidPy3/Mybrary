@@ -1,7 +1,6 @@
-import logo from "./logo.svg";
-import "./App.css";
-import Navigation from "./components/navigation";
-import Hero from "./components/hero";
+import "./index.css";
+import Navigation from "./components/Navigation";
+import Hero from "./components/Hero";
 
 function App() {
   return (
