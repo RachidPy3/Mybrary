@@ -4996,7 +4996,7 @@ const trending =  data.works;
     <div className="app">
       <Navigation/>
       <Hero/>
-      <Trending trending={trending}/>
+      <Trending trending={trending.slice(0, 10)}/>
     </div>
   );
 }
