@@ -5007,10 +5007,10 @@ function App() {
 const trending =  data.works;
 
   return (
-    <div className="app">
+    <div className="App">
       <Navigation/>
       <Hero/>
-      <Trending trending={bookData.slice(0, 12)}/>
+    <p>Checking pull requesr</p>
     </div>
   );
 }
