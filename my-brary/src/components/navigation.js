@@ -1,7 +1,6 @@
 import React from "react";
 import "./navigation.css";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import TrendingPage from "../pages/TrendingPage";
+import { Link } from "react-router-dom";
 
 export default function Navigation() {
   return (
@@ -23,29 +22,18 @@ export default function Navigation() {
       </section>
 
       <section className="bottom">
-        <Router>
-          <Navbar />
-          <Routes>
-            <Route path="/trending" element={<TrendingPage />} />
-          </Routes>
-        </Router>
+        <nav>
+          <ul>
+            <li>Home</li>
+            <li>
+              <Link to="/trending">Trending</Link>
+            </li>
+            <li>Category</li>
+            <li>Find a store</li>
+            <li>Blog</li>
+          </ul>
+        </nav>
       </section>
     </header>
-  );
-}
-
-function Navbar() {
-  return (
-    <nav>
-      <ul>
-        <li>Home</li>
-        <li>
-          <Link to="/trending">Trending</Link>
-        </li>
-        <li>Category</li>
-        <li>Find a store</li>
-        <li>Blog</li>
-      </ul>
-    </nav>
   );
 }

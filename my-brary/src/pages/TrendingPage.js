@@ -6,7 +6,7 @@ export default function TrendingPage({ data }) {
   return (
     <div>
       <Navigation />
-      <Trending />
+      <Trending trending={data} />
     </div>
   );
 }

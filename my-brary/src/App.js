@@ -4,6 +4,8 @@ import "./styles.css";
 import Trending from "./components/Trending";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import TrendingPage from "./pages/TrendingPage";
 
 function App() {
   const [bookData, setBookData] = useState([]);
@@ -18,7 +20,12 @@ function App() {
 
   return (
     <div className="app">
-      <Navigation />
+      <Router>
+        <Navigation />
+        <Routes>
+          <Route path="/Trending" element={<TrendingPage />} />
+        </Routes>
+      </Router>
       <div className="con">
         <Hero />
         <Trending trending={bookData.slice(0, 12)} />
