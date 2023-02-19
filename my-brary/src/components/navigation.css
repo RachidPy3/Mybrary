@@ -118,13 +118,19 @@ ul {
   justify-content: space-between;
 }
 
-li {
+li,
+a {
   color: rgb(156, 156, 156);
   font-weight: 700;
   font-size: 1em;
   cursor: pointer;
 }
 
-li:hover {
+li:hover,
+a:hover {
   color: var(--DarkBlue);
+}
+
+a {
+  text-decoration: none;
 }

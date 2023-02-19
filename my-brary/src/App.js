@@ -16,8 +16,6 @@ function App() {
       });
   }, []);
 
-  const trending = bookData.works;
-
   return (
     <div className="app">
       <Navigation />
