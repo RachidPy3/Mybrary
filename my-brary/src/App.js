@@ -24,10 +24,14 @@ function App() {
 const trending =  bookData.works;
 
   return (
-    <div className="App">
+    <div className="app">
+      
       <Navigation/>
+      <div className='con'>
       <Hero/>
     <Trending trending={bookData.slice(0,12)}/>
+      </div>
+      
     </div>
   );
 }
