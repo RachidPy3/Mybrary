@@ -14,7 +14,7 @@ h1 {
 p {
   color: gray;
 }
-img {
+.hero-image > img {
   height: 250px;
   padding-right: 60px;
 }
