@@ -11,6 +11,7 @@ export default function Navigation() {
 
         <div className="search-bar">
           <input placeholder="search by autor, title, name" type="text" />
+          <div className="search-btn">Search</div>
         </div>
 
         <div className="favorites">
