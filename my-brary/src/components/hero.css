@@ -1,39 +1,38 @@
-.hero{
-    background-color: #f5e6de;
-    display: flex;
-    gap:20px;
-    border-radius: 20px;
-    box-sizing: border-box;
-    overflow: hidden;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+.hero {
+  background-color: #f5e6de;
+  display: flex;
+  gap: 20px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
-h1{
-    color: #403A88;
+h1 {
+  color: #403a88;
 }
-p{
-    color: gray;
+p {
+  color: gray;
 }
-img{
-    
-    height: 250px;
-    padding-right: 60px;
+img {
+  height: 250px;
+  padding-right: 60px;
 }
-.heading{
-    padding: 60px 60px 60px 60px;
-    width: 40%;
-}
-
-button{
-    background-color: #C1A693;
-    color: white;
-    padding: 8px 15px 8px 15px;
-    border-radius: 10px;
-    border: none;
+.heading {
+  padding: 60px 60px 60px 60px;
+  width: 40%;
 }
 
-.hero-image{
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
+button {
+  background-color: #c1a693;
+  color: white;
+  padding: 8px 15px 8px 15px;
+  border-radius: 10px;
+  border: none;
+}
+
+.hero-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
