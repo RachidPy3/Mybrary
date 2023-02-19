@@ -1,12 +1,10 @@
 import React from "react";
-import Navigation from "../components/navigation";
-import Trending from "../components/Trending";
 
-export default function TrendingPage({ data }) {
+export default function TrendingPage() {
   return (
     <div>
-      <Navigation />
-      <Trending trending={data} />
+     Trending Section
+      
     </div>
   );
 }

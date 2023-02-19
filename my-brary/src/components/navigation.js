@@ -24,7 +24,7 @@ export default function Navigation() {
       <section className="bottom">
         <nav>
           <ul>
-            <li>Home</li>
+            <li><Link to ="/">Home</Link> </li>
             <li>
               <Link to="/trending">Trending</Link>
             </li>
