@@ -3,6 +3,8 @@ import Navigation from './components/navigation';
 import Hero from './components/hero';
 import './styles.css'
 import Trending from './components/Trending';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 
 function App() {
   const data={
@@ -4990,13 +4992,25 @@ function App() {
     "hours":0
  };
 
+ const [bookData , setBookData] = useState([])
+ useEffect(()=>{
+   axios.get("https://openlibrary.org/trending/daily.json").then( (response) =>{
+      console.log(response.data.works);
+      setBookData(()=> response.data.works)
+    })
+ }, [])
+
+ 
+ 
+
+
 const trending =  data.works;
 
   return (
     <div className="app">
       <Navigation/>
       <Hero/>
-      <Trending trending={trending.slice(0, 10)}/>
+      <Trending trending={bookData.slice(0, 12)}/>
     </div>
   );
 }

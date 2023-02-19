@@ -15,17 +15,11 @@ export default function Trending({trending}) {
                 <div>
                     <p className='title'>{p.title}</p>
                     <p className='author'>{p.author}</p>
-                    <div className='stars'>
-                        <BsStarFill/>
-                        <BsStarFill/>
-                        <BsStarFill/>
-                        <BsStarFill/>
-                        <BsStarFill/>
-                    </div>
+                    <p className='pubDate'>{p.first_publish_year}</p>
                 </div>
             </div>
                 
-            ))};
+            ))}
         
         </div>
     </div>

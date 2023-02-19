@@ -1,8 +1,16 @@
 .trending-header{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
+.trending-header h3{
+    font-size: 25px;
+}
+
+.trending-header p{
+    font-size: 15px;
+}
 .trending img{
     height: 200px;
     width: 130px;
@@ -16,4 +24,28 @@
 
 .title{
     color: black;
+    font-size: 14px;
 }
+
+.trending p{
+    margin: 0;
+    padding: 0;
+}
+.pubDate{
+    font-size: 12px;
+}
+
+.trending{
+    margin: 20px;
+}
+
+.single-grid{
+    align-items: center;
+    
+    padding: 10px;
+    background-color: #F5E6DE;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+   
+}
+
