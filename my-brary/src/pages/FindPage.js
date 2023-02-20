@@ -5,12 +5,11 @@ import axios from "axios";
 
 const FindPage = () => {
   const [input, setInput] = useState("");
-  const [book, setBook] = useState([
-    {
-      bookTitle: "",
-      publishDate: "",
-    },
-  ]);
+  const [book, setBook] = useState({
+    bookImage: "",
+    bookTitle: "",
+    publishDate: "",
+  });
 
   function handleChange(e) {
     setInput(e.target.value);
@@ -18,9 +17,9 @@ const FindPage = () => {
 
   function handleClick() {
     axios.get(`https://openlibrary.org/isbn/${input}.json`).then((data) => {
-      console.log(data.data);
       setBook((book) => ({
         ...book,
+        bookImage: `https://covers.openlibrary.org/b/id/${data.data.covers[0]}-M.jpg`,
         bookTitle: data.data.title,
         publishDate: data.data.publish_date,
       }));
@@ -42,10 +41,13 @@ const FindPage = () => {
           </div>
         </div>
       </div>
-      <div className="searched-book">
-        <h1>Title: {book.bookTitle}</h1>
-        <h3>Date: {book.publishDate}</h3>
-      </div>
+      {book.bookImage && (
+        <div className="searched-book">
+          <img src={book.bookImage} alt="book image" />
+          <p className="title">Title: {book.bookTitle}</p>
+          <p className="date">Date: {book.publishDate}</p>
+        </div>
+      )}
     </div>
   );
 };
