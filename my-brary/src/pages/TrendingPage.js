@@ -17,7 +17,6 @@ export default function TrendingPage() {
   }
   return (
     <div>
-      <Navigation />
       <Trending trending={bookData.slice(0, 12)} />
     </div>
   );
