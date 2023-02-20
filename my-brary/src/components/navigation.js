@@ -13,7 +13,7 @@ export default function Navigation() {
         <nav>
           <ul>
             <li>
-              <Link to="/">Home</Link>{" "}
+              <Link to="/">Home</Link>
             </li>
             <li>
               <Link to="/trending">Trending</Link>
@@ -32,10 +32,3 @@ export default function Navigation() {
     </header>
   );
 }
-
-/*
- <div className="search-bar">
-    <input placeholder="search by autor, title, name" type="text" />
-    <div className="search-btn">Search</div>
-  </div>
-*/
