@@ -1,14 +1,15 @@
 import React from "react";
 import "./Trending.css";
+import { Link } from "react-router-dom";
 
 export default function Trending({ trending }) {
   return (
     <div className="trending">
       <div className="trending-header">
         <h3>Trending</h3>
-        <p>View All</p>
+        <Link to="/trending">View All</Link>
       </div>
-
+        
       <div className="grid">
         {trending.map((p, id) => (
           <div className="single-grid" key={id}>
