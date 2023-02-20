@@ -7,7 +7,7 @@ export default function Navigation() {
     <header>
       <section className="top">
         <div className="logo">
-          <span>Booksy</span>
+          <span>MyBrary</span>
         </div>
 
         <div className="search-bar">
@@ -24,7 +24,9 @@ export default function Navigation() {
       <section className="bottom">
         <nav>
           <ul>
-            <li><Link to ="/">Home</Link> </li>
+            <li>
+              <Link to="/">Home</Link>{" "}
+            </li>
             <li>
               <Link to="/trending">Trending</Link>
             </li>

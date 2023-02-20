@@ -3,8 +3,7 @@ import React from "react";
 export default function TrendingPage() {
   return (
     <div>
-     Trending Section
-      
+      <h1>trending page</h1>
     </div>
   );
 }
