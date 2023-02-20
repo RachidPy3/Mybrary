@@ -10,18 +10,6 @@ export default function Navigation() {
           <span>MyBrary</span>
         </div>
 
-        <div className="search-bar">
-          <input placeholder="search by autor, title, name" type="text" />
-          <div className="search-btn">Search</div>
-        </div>
-
-        <div className="favorites">
-          <div className="profile">O</div>
-          <span className="language">EN</span>
-        </div>
-      </section>
-
-      <section className="bottom">
         <nav>
           <ul>
             <li>
@@ -30,12 +18,24 @@ export default function Navigation() {
             <li>
               <Link to="/trending">Trending</Link>
             </li>
-            <li>Category</li>
-            <li>Find a store</li>
-            <li>Blog</li>
+            <li>
+              <Link to="/find">Find a Book</Link>
+            </li>
           </ul>
         </nav>
+
+        <div className="favorites">
+          <div className="profile">O</div>
+          <span className="language">EN</span>
+        </div>
       </section>
     </header>
   );
 }
+
+/*
+ <div className="search-bar">
+    <input placeholder="search by autor, title, name" type="text" />
+    <div className="search-btn">Search</div>
+  </div>
+*/

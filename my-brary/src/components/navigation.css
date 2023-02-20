@@ -14,9 +14,6 @@ body {
 }
 
 header {
-  display: grid;
-  grid-template-columns: 0;
-  grid-template-rows: 3fr 1fr;
   height: 100px;
   min-width: 100vw;
   align-items: center;
@@ -100,12 +97,6 @@ input {
 bottom section
 
 */
-
-.bottom {
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-}
 
 nav {
   width: 520px;

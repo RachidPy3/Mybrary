@@ -20,6 +20,16 @@ export default function TrendingPage({data}) {
 
 
 
+export default function TrendingPage() {
+  const [bookData, setBookData] = useState([]);
+  useEffect(() => {
+    axios
+      .get("https://openlibrary.org/trending/daily.json")
+      .then((response) => {
+        console.log(response.data.works);
+        setBookData(() => response.data.works);
+      });
+  }, []);
   return (
     <>
     <Trending  trending={bookData}/>
