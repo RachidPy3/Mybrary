@@ -6,7 +6,6 @@ import "../styles.css";
 function HomePage() {
   return (
     <div className="con">
-      <Navigation />
       <Hero />
     </div>
   );
