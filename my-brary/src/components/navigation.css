@@ -38,37 +38,6 @@ span {
   font-size: 2em;
 }
 
-.search-bar {
-  background: var(--Gray);
-  height: 25px;
-  border-radius: 5px;
-  width: 500px;
-  padding: 10px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-input {
-  background: var(--Gray);
-  border: none;
-  height: 20px;
-  width: 450px;
-}
-
-::placeholder {
-  font-weight: 600;
-  font-size: medium;
-}
-
-.search-btn {
-  font-size: 1em;
-}
-
-.search-bar:hover {
-  cursor: pointer;
-}
-
 .favorites {
   display: flex;
   flex-direction: row;
