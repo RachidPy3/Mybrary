@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import Hero from "../components/hero";
 import "../styles.css";
 import { Link } from "react-router-dom";

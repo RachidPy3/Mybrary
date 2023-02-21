@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import axios from "axios";
 
 const TrendingContext = createContext({});
@@ -6,8 +6,6 @@ const TrendingContext = createContext({});
 export function TrendingProvider({ children }) {
   const [bookData, setBookData] = useState([]);
   const trendingUrl = "https://openlibrary.org/trending/daily.json";
-
-  const [bookId, setBookId] = useState(null);
   useEffect(() => {
     getData();
   }, []);

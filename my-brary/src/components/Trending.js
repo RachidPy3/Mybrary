@@ -1,4 +1,3 @@
-import { getToPathname } from "@remix-run/router";
 import React from "react";
 import { createSearchParams, useNavigate } from "react-router-dom";
 import "./Trending.css";
