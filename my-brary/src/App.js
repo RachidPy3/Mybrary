@@ -11,7 +11,6 @@ function App() {
   return (
     <div className="app">
       <TrendingProvider>
-        {console.log()}
         <Router>
           <Navigation />
           <Routes>
