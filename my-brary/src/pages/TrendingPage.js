@@ -1,23 +1,12 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React, { useContext } from "react";
 import Trending from "../components/Trending";
+import TrendingContext from "../context/TrendingContext";
 
 export default function TrendingPage() {
-  const [bookData, setBookData] = useState([]);
-  const trendingUrl = "https://openlibrary.org/trending/daily.json";
-
-  useEffect(() => {
-    getData();
-  }, []);
-
-  function getData() {
-    axios.get(trendingUrl).then((response) => {
-      setBookData(() => response.data.works);
-    });
-  }
+  const [...bookData] = useContext(TrendingContext);
   return (
     <div>
-      <Trending trending={bookData} />
+      <Trending bookData={bookData} />
     </div>
   );
 }

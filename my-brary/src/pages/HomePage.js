@@ -1,24 +1,13 @@
-import React , {useEffect, useState} from "react";
+import React, { useState, useContext } from "react";
 import Hero from "../components/hero";
 import "../styles.css";
 import { Link } from "react-router-dom";
 import Trending from "../components/Trending";
-import axios from "axios";
+import TrendingContext from "../context/TrendingContext";
 
 function HomePage() {
-  const [bookData, setBookData] = useState([]);
-  const trendingUrl = "https://openlibrary.org/trending/daily.json";
-
-  useEffect(() => {
-    getData();
-  }, []);
-
-  function getData() {
-    axios.get(trendingUrl).then((response) => {
-      setBookData(() => response.data.works);
-    });
-  }
-
+  const [...bookData] = useContext(TrendingContext);
+  console.log(bookData);
   return (
     <div className="con">
       <Hero />
@@ -26,7 +15,7 @@ function HomePage() {
         <h3>Trending</h3>
         <Link to="/trending">View All</Link>
       </div>
-      <Trending trending={bookData.slice(0, 12)} />
+      <Trending bookData={bookData} />
     </div>
   );
 }

@@ -1,28 +1,35 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useSearchParams } from "react-router-dom";
+import "./bookpage.css";
 
-function BookPage() {
+function BookPage({ imageId }) {
   const { id } = useParams();
-  const [bookData, setBookData] = useState({});
+
+  const [searchParam] = useSearchParams();
 
   const bookUrl = "https://openlibrary.org/works/" + id + ".json";
 
-  useEffect(() => {
-    try {
-      axios.get(bookUrl).then((response) => {
-        setBookData(response.data);
-      });
-    } catch (error) {
-      console.log(error);
-    }
-  }, [id]);
+  console.log(bookUrl);
 
   return (
-    <div>
-      {console.log(bookData.title)}
-      this is book page {id}
-    </div>
+    <>
+      <div className="container">
+        {id}
+        <div>
+          <img
+            src={`https://covers.openlibrary.org/b/id/${searchParam.get(
+              "imageId"
+            )}-L.jpg`}
+            alt=""
+          />
+        </div>
+        <div>
+          <h1>Title</h1>
+          <div>{console.log("hell0")}</div>
+        </div>
+      </div>
+    </>
   );
 }
 

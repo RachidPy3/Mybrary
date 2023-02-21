@@ -5,19 +5,24 @@ import TrendingPage from "./pages/TrendingPage";
 import HomePage from "./pages/HomePage";
 import Navigation from "./components/navigation";
 import BookPage from "./pages/BookPage";
+import { TrendingProvider } from "./context/TrendingContext";
 
 function App() {
   return (
     <div className="app">
-      <Router>
-        <Navigation />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/Trending" element={<TrendingPage />} />
-          <Route path="/Find" element={<FindPage />} />
-          <Route path="/book/works/:id" element={<BookPage />} />
-        </Routes>
-      </Router>
+      <TrendingProvider>
+        {console.log()}
+        <Router>
+          <Navigation />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/Trending" element={<TrendingPage />} />
+            <Route path="/Find" element={<FindPage />} />
+            <Route path="/book" element={<FindPage />} />
+            <Route path="/book/works/:id" element={<BookPage />} />
+          </Routes>
+        </Router>
+      </TrendingProvider>
     </div>
   );
 }

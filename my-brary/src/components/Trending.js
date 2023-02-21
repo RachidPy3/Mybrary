@@ -1,13 +1,32 @@
+import { getToPathname } from "@remix-run/router";
 import React from "react";
+import { createSearchParams, useNavigate } from "react-router-dom";
 import "./Trending.css";
-import { Link } from "react-router-dom";
 
-export default function Trending({ trending }) {
+export default function Trending({ bookData }) {
+  console.log(bookData);
+  const navigate = useNavigate();
+  function onBookPage(img, id) {
+    console.log("hell0");
+    navigate({
+      pathname: `/book${id}`,
+      search: createSearchParams({
+        imageId: img,
+        bookId: id,
+      }).toString(),
+    });
+  }
   return (
-        <div className="trending">
+    <div className="trending">
       <div className="grid">
-        {trending.map((p, id) => (
-          <div className="single-grid" key={id}>
+        {bookData.map((p) => (
+          <div
+            className="single-grid"
+            key={p.cover_i}
+            onClick={() => {
+              onBookPage(p.cover_i, p.key);
+            }}
+          >
             <img src="assets/cover.jpg"></img>
             <div>
               <p className="title">{p.title}</p>
