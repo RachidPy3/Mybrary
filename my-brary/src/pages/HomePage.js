@@ -7,7 +7,6 @@ import TrendingContext from "../context/TrendingContext";
 
 function HomePage() {
   const [...bookData] = useContext(TrendingContext);
-  console.log(bookData);
   return (
     <div className="con">
       <Hero />

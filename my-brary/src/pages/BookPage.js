@@ -13,11 +13,10 @@ function BookPage() {
     description: "",
   });
 
-  const bookUrl = `https://openlibrary.org/works/${id}+.json`;
+  const bookUrl = `https://openlibrary.org/works/${id}.json`;
 
   React.useEffect(() => {
     axios.get(bookUrl).then((res) => {
-      console.log(res.data);
       setBook((book) => ({
         ...book,
         bookTitle: res.data.title,

@@ -14,7 +14,6 @@ export function TrendingProvider({ children }) {
 
   function getData() {
     axios.get(trendingUrl).then((response) => {
-      console.log(response);
       setBookData(response.data.works);
     });
   }

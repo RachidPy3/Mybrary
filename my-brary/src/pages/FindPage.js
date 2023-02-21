@@ -23,7 +23,6 @@ const FindPage = () => {
         bookTitle: data.data.title,
         publishDate: data.data.publish_date,
       }));
-      console.log(book);
     });
   }
 

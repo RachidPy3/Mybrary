@@ -26,7 +26,9 @@ export default function Trending({ bookData }) {
               onBookPage(p.cover_i, p.key);
             }}
           >
-            <img src="assets/cover.jpg"></img>
+            <img
+              src={`https://covers.openlibrary.org/b/id/${p.cover_i}-M.jpg`}
+            ></img>
             <div>
               <p className="title">{p.title}</p>
               <p className="author">{p.author}</p>
