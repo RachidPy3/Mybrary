@@ -17,10 +17,14 @@ function BookPage() {
 
   React.useEffect(() => {
     axios.get(bookUrl).then((res) => {
+      console.log(res.data);
       setBook((book) => ({
         ...book,
         bookTitle: res.data.title,
-        description: res.data.description.value,
+        description:
+          res.data.description === undefined
+            ? "No Description"
+            : res.data.description.value,
       }));
     });
   }, []);
@@ -39,7 +43,8 @@ function BookPage() {
       <div className="text-area">
         <h1>Title: {book.bookTitle}</h1>
         <h3>
-          Description: <p>{book.description}</p>
+          Description:
+          <p>{book.description}</p>
         </h3>
       </div>
     </div>
