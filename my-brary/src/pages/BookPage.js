@@ -28,7 +28,7 @@ function BookPage() {
 
   return (
     <div className="container">
-      <div>
+      <div className="image-area">
         <img
           src={`https://covers.openlibrary.org/b/id/${searchParam.get(
             "imageId"
@@ -36,9 +36,12 @@ function BookPage() {
           alt=""
         />
       </div>
-      <div>
+
+      <div className="text-area">
         <h1>Title: {book.bookTitle}</h1>
-        <h3>Description: {book.description}</h3>
+        <h3>
+          Description: <p>{book.description}</p>
+        </h3>
       </div>
     </div>
   );

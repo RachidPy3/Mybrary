@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.image-area {
+  padding: 10px;
+}
+
+img {
+  height: 365px;
+}
+
+p {
+  font-size: medium;
+}
