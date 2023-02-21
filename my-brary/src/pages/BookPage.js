@@ -7,12 +7,13 @@ function BookPage() {
   const { id } = useParams();
 
   const [searchParam] = useSearchParams();
+
   const [book, setBook] = React.useState({
     bookTitle: "",
     description: "",
   });
 
-  const bookUrl = "https://openlibrary.org/works/" + id + ".json";
+  const bookUrl = `https://openlibrary.org/works/${id}+.json`;
 
   React.useEffect(() => {
     axios.get(bookUrl).then((res) => {
@@ -26,22 +27,20 @@ function BookPage() {
   }, []);
 
   return (
-    <>
-      <div className="container">
-        <div>
-          <img
-            src={`https://covers.openlibrary.org/b/id/${searchParam.get(
-              "imageId"
-            )}-M.jpg`}
-            alt=""
-          />
-        </div>
-        <div>
-          <h1>Title: {book.bookTitle}</h1>
-          <h3>Description: {book.description}</h3>
-        </div>
+    <div className="container">
+      <div>
+        <img
+          src={`https://covers.openlibrary.org/b/id/${searchParam.get(
+            "imageId"
+          )}-M.jpg`}
+          alt=""
+        />
       </div>
-    </>
+      <div>
+        <h1>Title: {book.bookTitle}</h1>
+        <h3>Description: {book.description}</h3>
+      </div>
+    </div>
   );
 }
 
