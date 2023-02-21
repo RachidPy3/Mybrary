@@ -5,7 +5,9 @@ const TrendingContext = createContext({});
 
 export function TrendingProvider({ children }) {
   const [bookData, setBookData] = useState([]);
+
   const trendingUrl = "https://openlibrary.org/trending/daily.json";
+
   useEffect(() => {
     getData();
   }, []);

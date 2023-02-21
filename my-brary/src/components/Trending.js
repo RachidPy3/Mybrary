@@ -3,10 +3,9 @@ import { createSearchParams, useNavigate } from "react-router-dom";
 import "./Trending.css";
 
 export default function Trending({ bookData }) {
-  console.log(bookData);
   const navigate = useNavigate();
+
   function onBookPage(img, id) {
-    console.log("hell0");
     navigate({
       pathname: `/book${id}`,
       search: createSearchParams({
@@ -15,6 +14,7 @@ export default function Trending({ bookData }) {
       }).toString(),
     });
   }
+
   return (
     <div className="trending">
       <div className="grid">
